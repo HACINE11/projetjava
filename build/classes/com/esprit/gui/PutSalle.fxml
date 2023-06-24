@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.PutSalleController">
+     <children>
+      <Label layoutX="28.0" layoutY="101.0" text="Capacite" />
+      <Label layoutX="28.0" layoutY="46.0" text="Numero SALLE" />
+      <Label layoutX="28.0" layoutY="158.0" text="Type SALLE" />
+      <TextField fx:id="tfNumero" layoutX="28.0" layoutY="63.0" />
+      <TextField fx:id="tfCapacite" layoutX="28.0" layoutY="118.0" />
+      <TextField fx:id="tfType" layoutX="28.0" layoutY="175.0" />
+      <Label layoutX="21.0" layoutY="6.0" text="GESTION DES SALLES">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Table_Salle" layoutX="306.0" layoutY="14.0" prefHeight="369.0" prefWidth="267.0">
+        <columns>
+          <TableColumn fx:id="c_numero" prefWidth="101.0" text="Numero Salle" />
+          <TableColumn fx:id="c_capacite" prefWidth="61.0" text="Capacite" />
+            <TableColumn fx:id="c_type" prefWidth="104.0" text="Type_SALLE" />
+        </columns>
+      </TableView>
+      <Button layoutX="33.0" layoutY="246.0" mnemonicParsing="false" onAction="#ajouterSalle" text="Ajouter" />
+      <Button layoutX="107.0" layoutY="246.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button layoutX="204.0" layoutY="246.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button layoutX="35.0" layoutY="341.0" mnemonicParsing="false" onAction="#chercher_salle" text="search" />
+      <TextField fx:id="chercher" layoutX="28.0" layoutY="308.0"  />
+   </children>
+    
+</AnchorPane>
